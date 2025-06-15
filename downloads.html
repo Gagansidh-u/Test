@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>Your Downloads</title></head>
+<body>
+  <h2>Purchased Games</h2>
+  {% for game in games %}
+    <div>
+      <h3>{{ game[0] }}</h3>
+      <a href="{{ game[1] }}">Download</a>
+    </div>
+  {% else %}
+    <p>No purchases yet.</p>
+  {% endfor %}
+</body>
+</html>
