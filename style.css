@@ -1,0 +1,25 @@
+
+body {
+    font-family: Arial;
+    background-color: #121212;
+    color: white;
+}
+.game-card {
+    background-color: #1e1e1e;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.price {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+.original-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 10px;
+}
+.discounted-price {
+    color: #f44336;
+    font-weight: bold;
+}

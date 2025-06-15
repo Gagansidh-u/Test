@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Demons Store</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <h1>Welcome to Demons Store</h1>
+  <div class="games">
+    {% for game in games %}
+    <div class="game-card">
+      <img src="{{ game[3] }}" alt="{{ game[1] }}">
+      <h3>{{ game[1] }}</h3>
+      <p>{{ game[2][:100] }}...</p>
+      <p class="price">
+        <span class="original-price">₹{{ game[5] }}</span>
+        <span class="discounted-price">Now ₹{{ game[4] }}</span>
+      </p>
+      <form action="/buy/{{ game[0] }}" method="post">
+        <input type="hidden" name="price" value="{{ game[4] }}">
+        <button class="btn btn-success">Buy Now</button>
+      </form>
+    </div>
+    {% endfor %}
+  </div>
+</body>
+</html>
